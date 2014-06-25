@@ -45,4 +45,5 @@ angular.module('starter', ['ionic'])
 		$scope.won = right;
 		$scope.item = itemSelected;
     };
+
 }]);
