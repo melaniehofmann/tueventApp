@@ -14,9 +14,9 @@ angular.module('starter', ['ionic'])
       url: "/play",
       templateUrl: "play.html"
     })
-    .state("end", {
-      url: "/end",
-      templateUrl: "end.html"
+    .state("quiz", {
+      url: "/quiz",
+      templateUrl: "quiz.html"
     });
   $urlRouterProvider.otherwise("/");
 })
@@ -34,5 +34,7 @@ angular.module('starter', ['ionic'])
 })
 .controller('AppController', ['$scope', '$state', function($scope, $state) {
 
-
+	$scope.won = false;
+	$scope.drink;
+	
 }]);

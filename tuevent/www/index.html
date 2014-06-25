@@ -46,6 +46,56 @@
     </ion-view>
     </script>
  
+  <script id="quiz.html" type="text/ng-template">
+    <ion-view title="Tu Event 2015">
+      <ion-content has-bouncing="false">
+        <div class="list" ng-show="drink">
+           <div class="item item-divider">
+            Which ingredient can often be found in energydrinks?
+          </div>
+
+          <a class="item item -thumbnail">
+            <img src="assets/Glucuronolactone.png">
+            <h2>Glucuronolactone</h2>
+            <p>Glucuronolactone is a naturally occurring chemical that is an important structural component of nearly all connective tissues.</p>
+          </a>
+          <a class="item">
+            <img src="assets/Methyl.png">
+            <h2>Methylparaben</h2>
+            <p>Methylparaben is found in several fruits, in particular blueberries, where it acts as an antimicrobial agent.</p>
+          </a>
+          <a class="item">
+            <img src="assets/Dimethicone.png">
+            <h2>Dimethicone</h2>
+            <p>Polydimethylsiloxane (PDMS) belongs to a group of polymeric organosilicon compounds that are commonly referred to as silicones.</p>
+          </a>
+        </div>
+        <div class="list" ng-show="!drink">
+           <div class="item item-divider">
+            Whats not a botanical fruit?
+          </div>
+
+          <a class="item item -thumbnail">
+            <img src="assets/Cucurbits.png">
+            <h2>Cucurbits</h2>
+          </a>
+          <a class="item">
+            <img src="assets/tomatoe.png">
+            <h2>Tomatoe</h2>
+          </a>
+          <a class="item">
+            <img src="assets/broccoli.jpg">
+            <h2>Broccoli</h2>
+          </a>
+        </div>
+
+        <div ng-show="won">
+          <p>You are right!</p>
+          <a class="button button-full button-calm" href="#/play"> Scan again</a>
+        </div>
+      </ion-content>
+    </ion-view>
+    </script>
     
   </body>
 </html>
