@@ -97,11 +97,11 @@
         </div>
 
         <div ng-show="won && quizCliked">
-          <p> <i class="icon ion-thumbsup"/> You are right! {{item}} is the right answer.</p>
+          <p class="ion-thumbsup text-center item-text-wrap"> You are right! {{item}} is the right answer.</p>
           <a class="button button-full button-calm" href="#/play"> Scan again</a>
         </div>
         <div ng-show="!won && quizCliked">
-          <p><i class="icon ion-thumbsdown"/> {{item}} is not the right answer</p>
+          <p class="ion-thumbsdown text-center item-text-wrap"> {{item}} is not the right answer</p>
         </div>
       </ion-content>
     </ion-view>
