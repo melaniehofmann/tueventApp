@@ -34,7 +34,15 @@ angular.module('starter', ['ionic'])
 })
 .controller('AppController', ['$scope', '$state', function($scope, $state) {
 
-	$scope.won = false;
-	$scope.drink;
+	$scope.won;
+	$scope.drink = true;
+	$scope.item;
+	$scope.quizCliked = false; 
 	
+   $scope.win = function(right, itemSelected){
+		$scope.quizCliked = true;
+        console.info("You selected " + itemSelected);
+		$scope.won = right;
+		$scope.item = itemSelected;
+    };
 }]);

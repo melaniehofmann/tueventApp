@@ -40,11 +40,16 @@
             <a class="button  button-calm ion-heart" href="http://atm2014exd.blogspot.co.at/"> Blog</a>
           </div>
         </div>
-        <a class="button button-full button-calm ion-android-friends" href="#/play"> Join Game</a>
+        <a class="button button-full button-calm ion-android-friends" href="#/quiz"> Join Game</a>
         
       </ion-content>
     </ion-view>
     </script>
+ 
+  <script id="play.html" type="text/ng-template">
+
+  </script>
+ 
  
   <script id="quiz.html" type="text/ng-template">
     <ion-view title="Tu Event 2015">
@@ -54,17 +59,17 @@
             Which ingredient can often be found in energydrinks?
           </div>
 
-          <a class="item item -thumbnail">
+          <a class="item item-thumbnail-left" ng-click="win(true, 'Glucuronolactone')">
             <img src="assets/Glucuronolactone.png">
             <h2>Glucuronolactone</h2>
             <p>Glucuronolactone is a naturally occurring chemical that is an important structural component of nearly all connective tissues.</p>
           </a>
-          <a class="item">
+          <a class="item item-thumbnail-left" ng-click="win(false, 'Methylparaben')">
             <img src="assets/Methyl.png">
             <h2>Methylparaben</h2>
             <p>Methylparaben is found in several fruits, in particular blueberries, where it acts as an antimicrobial agent.</p>
           </a>
-          <a class="item">
+          <a class="item item-thumbnail-left" ng-click="win(false, 'Dimethicone')">
             <img src="assets/Dimethicone.png">
             <h2>Dimethicone</h2>
             <p>Polydimethylsiloxane (PDMS) belongs to a group of polymeric organosilicon compounds that are commonly referred to as silicones.</p>
@@ -75,23 +80,29 @@
             Whats not a botanical fruit?
           </div>
 
-          <a class="item item -thumbnail">
-            <img src="assets/Cucurbits.png">
+          <a class="item item-thumbnail-left" ng-click="win(false, 'Cucurbits')">
+            <img src="assets/Cucurbits.jpg">
             <h2>Cucurbits</h2>
+            <p></p>
           </a>
-          <a class="item">
-            <img src="assets/tomatoe.png">
+          <a class="item item-thumbnail-left" ng-click="win(false, 'Tomatoe')">
+            <img src="assets/tomatoe.jpg">
             <h2>Tomatoe</h2>
+            <p></p>
           </a>
-          <a class="item">
+          <a class="item item-thumbnail-left" ng-click="win(true, 'Broccoli')">
             <img src="assets/broccoli.jpg">
             <h2>Broccoli</h2>
+            <p></p>
           </a>
         </div>
 
-        <div ng-show="won">
-          <p>You are right!</p>
+        <div ng-show="won && quizCliked">
+          <p>You are right! {{item}} is the right answer.</p>
           <a class="button button-full button-calm" href="#/play"> Scan again</a>
+        </div>
+        <div ng-show="!won && quizCliked">
+          <p>{{item}} is not the right answer</p>
         </div>
       </ion-content>
     </ion-view>
