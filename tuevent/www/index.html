@@ -22,8 +22,7 @@
   </head>
   <body ng-app="starter" ng-controller="AppController">
     <ion-nav-bar class="nav-title-slide-ios7">
-      <ion-nav-back-button class="button-icon ion-arrow-left-c">
-      </ion-nav-back-button>
+
     </ion-nav-bar>
     <ion-nav-view animation="slide-left-right-ios7"></ion-nav-view>
 
@@ -31,7 +30,7 @@
     <ion-view title="Tu Event 2015">
       <ion-content has-bouncing="false">
         <div class="list card">
-          <div class="item item-divider text-center">
+          <div class="item item-divider text-center item-text-wrap">
             Group ATM 
           </div>
           <div class="item item-text-wrap">
@@ -55,42 +54,42 @@
     <ion-view title="Tu Event 2015">
       <ion-content has-bouncing="false">
         <div class="list" ng-show="drink">
-           <div class="item item-divider">
+           <div class="item item-divider item-text-wrap">
             Which ingredient can often be found in energydrinks?
           </div>
 
-          <a class="item item-thumbnail-left" ng-click="win(true, 'Glucuronolactone')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(true, 'Glucuronolactone')">
             <img src="assets/Glucuronolactone.png">
             <h2>Glucuronolactone</h2>
-            <p>Glucuronolactone is a naturally occurring chemical that is an important structural component of nearly all connective tissues.</p>
+            <p>is a naturally occurring chemical.</p>
           </a>
-          <a class="item item-thumbnail-left" ng-click="win(false, 'Methylparaben')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(false, 'Methylparaben')">
             <img src="assets/Methyl.png">
             <h2>Methylparaben</h2>
-            <p>Methylparaben is found in several fruits, in particular blueberries, where it acts as an antimicrobial agent.</p>
+            <p>is found in several fruits.</p>
           </a>
-          <a class="item item-thumbnail-left" ng-click="win(false, 'Dimethicone')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(false, 'Dimethicone')">
             <img src="assets/Dimethicone.png">
             <h2>Dimethicone</h2>
-            <p>Polydimethylsiloxane (PDMS) belongs to a group of polymeric organosilicon compounds that are commonly referred to as silicones.</p>
+            <p>belongs to a group of polymeric organosilicon compounds.</p>
           </a>
         </div>
         <div class="list" ng-show="!drink">
-           <div class="item item-divider">
+           <div class="item item-divider item-text-wrap">
             Whats not a botanical fruit?
           </div>
 
-          <a class="item item-thumbnail-left" ng-click="win(false, 'Cucurbits')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(false, 'Cucurbits')">
             <img src="assets/Cucurbits.jpg">
             <h2>Cucurbits</h2>
             <p></p>
           </a>
-          <a class="item item-thumbnail-left" ng-click="win(false, 'Tomatoe')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(false, 'Tomatoe')">
             <img src="assets/tomatoe.jpg">
             <h2>Tomatoe</h2>
             <p></p>
           </a>
-          <a class="item item-thumbnail-left" ng-click="win(true, 'Broccoli')">
+          <a class="item item-thumbnail-left item-text-wrap" ng-click="win(true, 'Broccoli')">
             <img src="assets/broccoli.jpg">
             <h2>Broccoli</h2>
             <p></p>
@@ -98,11 +97,11 @@
         </div>
 
         <div ng-show="won && quizCliked">
-          <p>You are right! {{item}} is the right answer.</p>
+          <p> <i class="icon ion-thumbsup"/> You are right! {{item}} is the right answer.</p>
           <a class="button button-full button-calm" href="#/play"> Scan again</a>
         </div>
         <div ng-show="!won && quizCliked">
-          <p>{{item}} is not the right answer</p>
+          <p><i class="icon ion-thumbsdown"/> {{item}} is not the right answer</p>
         </div>
       </ion-content>
     </ion-view>
