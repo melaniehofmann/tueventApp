@@ -45,5 +45,34 @@ angular.module('starter', ['ionic'])
 		$scope.won = right;
 		$scope.item = itemSelected;
     };
-
+		
+	 // Init
+    document.addEventListener('deviceready', function() {
+        $scope.$apply();
+    }, false);
+	
+	
+			
+	$scope.scan = function(){
+		console.log("Scanning");
+		cordova.plugins.barcodeScanner.scan (
+		
+			function (result) {
+				/*var s = "Result: " + result.text + "<br/>" +
+				"Format: " + result.format + "<br/>" +
+				"Cancelled: " + result.cancelled;
+				resultDiv.innerHTML = s;*/
+				console.log("Result");
+				$scope.quizCliked = false;
+				if ( $scope.drink = true){
+					$state.go("quiz");
+				}
+			}, 
+			function (error) {
+				alert("Scanning failed: " + error);
+			}
+		);
+		
+	};
+	
 }]);
