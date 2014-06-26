@@ -61,13 +61,13 @@ angular.module('starter', ['ionic'])
 				$scope.quizCliked = false;
 
 					
-				if (result.text == "8076809542517") {
+				if (result.text == "123456") {
 					
 					$scope.drink = true;	
 					$state.go("quiz");	
 				}
 					
-				if (result.text == "9004319003012") {
+				if (result.text == "1234567890") {
 					
 					$scope.drink = false;					
 					$state.go("quiz");				
