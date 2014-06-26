@@ -16,6 +16,7 @@
     <script src="angular-route.js">
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
+    <script src="barcodescanner.js"></script>
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
@@ -34,8 +35,9 @@
             Group ATM 
           </div>
           <div class="item item-text-wrap">
-          Some Game Information here</br>
-          
+          "Rift" is a game which tries to awake your curiosity about Technical University.
+          Look carefully! There are some objects hidden around you... find them and experience the "Rift".</br>
+          Have fun....          
             <a class="button  button-calm ion-heart" href="http://atm2014exd.blogspot.co.at/"> Blog</a>
           </div>
         </div>
@@ -48,7 +50,7 @@
   <script id="play.html" type="text/ng-template">
      <ion-view title="Tu Event 2015">
       <ion-content has-bouncing="false">
-        <button class="button button-full button-calm" ng-click="startScan()">Start Scan</button>
+        <button class="button button-full button-calm" ng-click="scan()">Start Scan</button>
       </ion-content>
     </ion-view>
   </script>
