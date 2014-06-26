@@ -59,9 +59,20 @@ angular.module('starter', ['ionic'])
 				resultDiv.innerHTML = s;*/
 				console.log("Result");
 				$scope.quizCliked = false;
-				if ( $scope.drink = true){
-					$state.go("quiz");
+
+					
+				if (result.text == "8076809542517") {
+					
+					$scope.drink = true;	
+					$state.go("quiz");	
 				}
+					
+				if (result.text == "9004319003012") {
+					
+					$scope.drink = false;					
+					$state.go("quiz");				
+				}
+					
 			}, 
 			function (error) {
 				alert("Scanning failed: " + error);
