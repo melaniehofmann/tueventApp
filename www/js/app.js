@@ -46,11 +46,6 @@ angular.module('starter', ['ionic'])
 		$scope.item = itemSelected;
     };
 		
-	 // Init
-    document.addEventListener('deviceready', function() {
-        $scope.$apply();
-    }, false);
-	
 	
 			
 	$scope.scan = function(){
